@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app02
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app02
+  template:
+    metadata:
+      labels:
+        app: app02
+    spec:
+      containers:
+        - name: app02
+          image: app02:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
+#          env:
+#            - name: SPRING_PROFILES_ACTIVE
+#              value: ""

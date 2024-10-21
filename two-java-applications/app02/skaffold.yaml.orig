@@ -1,0 +1,20 @@
+apiVersion: skaffold/v4beta11
+kind: Config
+metadata:
+  name: app02
+build:
+  artifacts:
+    - image: app02
+      requires:
+        - image: base
+          alias: BASE
+manifests:
+  rawYaml:
+    - ../kustomize/app02/*
+deploy:
+  kubectl: {}
+portForward:
+  - resourceType: deployment
+    resourceName: app02
+    port: http
+    localPort: 8080
