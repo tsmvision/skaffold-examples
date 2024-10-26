@@ -1,0 +1,16 @@
+apiVersion: skaffold/v4beta11
+kind: Config
+metadata:
+  name: app02
+build:
+  artifacts:
+  - image: app02
+    context: .
+    docker:
+      dockerfile: Dockerfile
+manifests:
+  kustomize:
+    paths:
+    - ../kustomize/app02
+deploy:
+  kubectl: {}

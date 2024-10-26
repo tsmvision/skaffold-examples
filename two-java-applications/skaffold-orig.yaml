@@ -1,0 +1,26 @@
+apiVersion: skaffold/v4beta11
+kind: Config
+metadata:
+  name: test-
+build:
+  artifacts:
+    - image: app01
+      context: app01
+      docker:
+        dockerfile: Dockerfile
+    - image: app02
+      context: app02
+      docker:
+        dockerfile: Dockerfile
+manifests:
+  kustomize:
+    paths:
+      - kustomize/base
+      - kustomize/app01
+      - kustomize/app02
+#profiles:
+#  - name: app02
+#    manifests:
+#      kustomize:
+#        paths:
+#          - kustomize/app02

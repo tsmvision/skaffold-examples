@@ -1,0 +1,21 @@
+apiVersion: skaffold/v4beta11
+kind: Config
+metadata:
+  name: app01
+build:
+  artifacts:
+  - image: app01
+    context: .
+    docker:
+      dockerfile: Dockerfile
+manifests:
+  kustomize:
+    paths:
+    - ../kustomize/app01
+deploy:
+  kubectl: {}
+# portForward:
+#   - resourceType: deployment
+#     resourceName: app01
+#     port: http
+#     localPort: 9001

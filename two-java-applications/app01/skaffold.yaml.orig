@@ -13,8 +13,3 @@ manifests:
     - ../kustomize/app01/*
 deploy:
   kubectl: {}
-portForward:
-  - resourceType: deployment
-    resourceName: app01
-    port: http
-    localPort: 8080
