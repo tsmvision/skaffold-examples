@@ -1,5 +1,6 @@
 #!/bin/bash
 
+minikube delete
 minikube start
 minikube addons enable ingress
 skaffold config set --global local-cluster true
