@@ -1,4 +1,5 @@
-FROM amazoncorretto:21-alpine3.20 AS builder
+ARG BASE_IMAGE
+FROM $BASE_IMAGE as builder
 
 WORKDIR /app
 COPY . .
