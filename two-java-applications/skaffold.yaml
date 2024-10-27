@@ -5,3 +5,7 @@ metadata:
 requires:
 - path: ./app01
 - path: ./app02
+#manifests:
+#  kustomize:
+#    paths:
+#    - kustomize/base
