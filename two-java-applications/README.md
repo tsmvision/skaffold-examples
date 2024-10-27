@@ -26,17 +26,28 @@ $ minikube tunnel
 
 Move to the other terminal
 
-testing app01
+testing app01 (Java Spring Boot)
 
 ```
 $ curl http://localhost:8080
 ```
-testing app02
+testing app02 (Java Spring Boot)
 
 ```
-$ curl http://localhost:8090
+$ curl http://localhost:8081
 ```
 
+testing app03 (Kotlin Spring Boot)
+
+```
+$ curl http://localhost:8082
+```
+
+testing app04 (Vite React Nginx)
+
+```
+$ curl http://localhost:8083
+```
 
 These testings with sub urls are not working at this time (ingress not working correctly)
 
@@ -44,6 +55,10 @@ These testings with sub urls are not working at this time (ingress not working c
 $ curl http://192.168.49.2/app01
 
 $ curl http://192.168.49.2/app02
+
+$ curl http://192.168.49.2/app03
+
+$ curl http://192.168.49.2/app04
 ```
 
 ### How to debug applications using IntelliJ
