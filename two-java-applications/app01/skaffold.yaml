@@ -16,3 +16,7 @@ build:
     requires:
     - image: base-image
       alias: BASE_IMAGE
+#manifests:
+#  kustomize:
+#    paths:
+#      - ../kustomize/app01

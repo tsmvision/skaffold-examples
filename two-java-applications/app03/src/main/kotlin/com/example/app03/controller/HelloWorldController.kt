@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RestController
 class HelloWorldController {
     @GetMapping
     fun getHelloWorld(): ResponseEntity<String> {
+        val a = 1;
+        val b = 2;
         return ResponseEntity.ok("Hello, World from app03 Kotlin Spring Boot")
     }
 }
