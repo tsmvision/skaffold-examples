@@ -4,8 +4,11 @@ metadata:
   name: two-java-applications
 requires:
 - path: ./app01
-- path: ./app02
-#manifests:
-#  kustomize:
-#    paths:
-#    - kustomize/base
+- path: ./app02/
+manifests:
+  kustomize:
+    paths:
+    - kustomize/app01
+    - kustomize/app02
+deploy:
+  kubectl: {}
