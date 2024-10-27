@@ -1,0 +1,18 @@
+apiVersion: skaffold/v4beta11
+kind: Config
+metadata:
+  name: app03
+requires:
+- path: ../base-image
+build:
+  tagPolicy:
+    envTemplate:
+      template: "1"
+  artifacts:
+  - image: app03
+    context: .
+    docker:
+      dockerfile: Dockerfile
+    requires:
+      - image: base-image
+        alias: BASE_IMAGE

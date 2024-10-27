@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: app04-service
+  name: app03-service
 spec:
   selector:
-    app: app04
+    app: app03
   ports:
     - protocol: TCP
-      port: 8083
-      targetPort: 80
+      port: 8082
+      targetPort: 8080
   type: LoadBalancer

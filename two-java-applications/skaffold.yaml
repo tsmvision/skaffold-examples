@@ -5,12 +5,14 @@ metadata:
 requires:
 - path: ./app01
 - path: ./app02
+- path: ./app03
 - path: ./app04
 manifests:
   kustomize:
     paths:
     - kustomize/app01
     - kustomize/app02
+    - kustomize/app03
     - kustomize/app04
 deploy:
   kubectl: {}
