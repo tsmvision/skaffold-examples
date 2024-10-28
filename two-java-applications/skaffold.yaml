@@ -14,5 +14,6 @@ manifests:
     - kustomize/app02
     - kustomize/app03
     - kustomize/app04
+#    - kustomize/base
 deploy:
   kubectl: {}
